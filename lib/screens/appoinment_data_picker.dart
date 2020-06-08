@@ -140,7 +140,36 @@ class _AppoinmentDatePickerState extends State<AppoinmentDatePicker> {
                     calendarController: _calendarController,
                   ),
                 ),
-   
+             Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Container(
+                    padding: EdgeInsets.all(15),
+                    decoration: BoxDecoration(
+                        color: Colors.grey,
+                        borderRadius: BorderRadius.circular(10.0)),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: <Widget>[
+                        Text("05 May 2020"),
+                        Text("Doctor Availabile"),
+                      ],
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 20, right: 20,bottom: 20),
+                  child: Container(
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colors.blue,
+                    ),
+                    child: FlatButton(
+                      onPressed: () {},
+                      child: Text("Confirm"),
+                    ),
+                  ),
+                )
               ],
             ),
           ),
