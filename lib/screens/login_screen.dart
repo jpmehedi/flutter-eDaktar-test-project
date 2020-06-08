@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../screens/home_screen.dart';
 import '../components/inputfield_builder.dart';
 import '../components/rounded_button.dart';
+import '../screens/appoinment_data_picker.dart';
 
 class LoginScreen extends StatefulWidget {
   static String id = "LoginScreen";
@@ -151,7 +152,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     child: FlatButton(
                       onPressed: () {
-                        Navigator.pushNamed(context, HomeScreen.id);
+                        Navigator.pushNamed(context, AppoinmentDatePicker.id);
                       },
                       child: Text(
                         "Login as Doctor",

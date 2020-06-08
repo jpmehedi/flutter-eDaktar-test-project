@@ -18,31 +18,102 @@ class _AppoinmentDatePickerState extends State<AppoinmentDatePicker> {
         body: Container(
           child: Column(
             children: <Widget>[
-              Container(
-                padding: EdgeInsets.only(left: 10),
-                decoration: BoxDecoration(
-                  color: Colors.grey[400],
-                  borderRadius: BorderRadius.circular(10.0),
-                ),
-                child: Column(
-                  children: <Widget>[
-                    Row(
-                      children: <Widget>[
-                        Column(
+              Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Container(
+                  padding: EdgeInsets.all(20),
+                  decoration: BoxDecoration(
+                    color: Colors.grey[400],
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                  child: Column(
+                    children: <Widget>[
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                          Column(
+                            children: <Widget>[
+                              Text("Dr. Mahinur Islam"),
+                              Text("Dr. Mahinur Islam"),
+                              Text("Dr. Mahinur Islam"),
+                              Text("Dr. Mahinur Islam"),
+                            ],
+                          ),
+                          RawMaterialButton(
+                            child: Icon(Icons.person_add),
+                            onPressed: () {},
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(50)),
+                            fillColor: Colors.white,
+                            constraints:
+                                BoxConstraints(minHeight: 60.0, minWidth: 60.0),
+                          ),
+                        ],
+                      ),
+                      Container(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
-                            Text("Dr. Mahinur Islam"),
-                            Text("Dr. Mahinur Islam"),
-                            Text("Dr. Mahinur Islam"),
-                            Text("Dr. Mahinur Islam"),
+                            Text("Working Days"),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: <Widget>[
+                                Chip(
+                                  label: Text("Sun"),
+                                ),
+                                Chip(
+                                  label: Text("Sun"),
+                                ),
+                                Chip(
+                                  label: Text("Sun"),
+                                ),
+                                Chip(
+                                  label: Text("Sun"),
+                                ),
+                              ],
+                            ),
+                            Row(
+                              children: <Widget>[
+                                Chip(
+                                  label: Text("Sun"),
+                                ),
+                              ],
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: <Widget>[
+                                Text("Visiting Hours"),
+                                Text("Fee"),
+                              ],
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: <Widget>[
+                                Text("09.00 AM - 12.00 PM"),
+                                Text("500 BDT"),
+                              ],
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: <Widget>[
+                                Text("Reviews"),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.end,
+                                  children: <Widget>[
+                                    Icon(Icons.star),
+                                    Icon(Icons.star),
+                                    Icon(Icons.star),
+                                    Icon(Icons.star),
+                                    Icon(Icons.star)
+                                  ],
+                                )
+                              ],
+                            )
                           ],
                         ),
-                        RoundedButtonBuilder(
-                          icon: Icon(Icons.person_add),
-                          buttonColor: Colors.white,
-                        )
-                      ],
-                    )
-                  ],
+                      )
+                    ],
+                  ),
                 ),
               )
             ],
