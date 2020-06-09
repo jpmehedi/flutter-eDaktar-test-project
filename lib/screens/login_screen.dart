@@ -152,7 +152,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     child: FlatButton(
                       onPressed: () {
-                        Navigator.pushNamed(context, AppoinmentDatePicker.id);
+                        Navigator.pushNamed(context, HomeScreen.id);
                       },
                       child: Text(
                         "Login as Doctor",
