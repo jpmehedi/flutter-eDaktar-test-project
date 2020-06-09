@@ -26,13 +26,37 @@ class _AppoinmentDatePickerState extends State<AppoinmentDatePicker> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(
-          title: Text("Selected  Date"),
-        ),
         body: SingleChildScrollView(
           child: Container(
             child: Column(
               children: <Widget>[
+                Container(
+                  padding: EdgeInsets.only(top: 20),
+                  child: FlatButton(
+                    padding: EdgeInsets.zero,
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.all(20.0),
+                      child: Row(
+                        children: <Widget>[
+                          Icon(Icons.arrow_back_ios),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Text(
+                            "Select Date",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 24,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
                 Padding(
                   padding: const EdgeInsets.all(20.0),
                   child: Container(
@@ -140,7 +164,7 @@ class _AppoinmentDatePickerState extends State<AppoinmentDatePicker> {
                     calendarController: _calendarController,
                   ),
                 ),
-             Padding(
+                Padding(
                   padding: const EdgeInsets.all(20.0),
                   child: Container(
                     padding: EdgeInsets.all(15),
@@ -157,7 +181,8 @@ class _AppoinmentDatePickerState extends State<AppoinmentDatePicker> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 20, right: 20,bottom: 20),
+                  padding:
+                      const EdgeInsets.only(left: 20, right: 20, bottom: 20),
                   child: Container(
                     width: double.infinity,
                     decoration: BoxDecoration(
