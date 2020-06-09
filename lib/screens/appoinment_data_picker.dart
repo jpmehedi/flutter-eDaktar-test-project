@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
 
+import '../components/doctor_card_builder.dart';
+
 class AppoinmentDatePicker extends StatefulWidget {
   static String id = "AppoinmentDatePicker";
   @override
@@ -57,203 +59,14 @@ class _AppoinmentDatePickerState extends State<AppoinmentDatePicker> {
                     ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(20.0),
-                  child: Container(
-                    padding: EdgeInsets.all(20),
-                    decoration: BoxDecoration(
-                      color: Colors.grey[400],
-                      borderRadius: BorderRadius.circular(10.0),
-                    ),
-                    child: Column(
-                      children: <Widget>[
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: <Widget>[
-                                Text(
-                                  "Dr. Mahinur Islam",
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20,
-                                  ),
-                                ),
-                                Text(
-                                  "Assistant Proffesior",
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                                Text(
-                                  "Cardiology",
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                                Text(
-                                  "Dhaka Medical College",
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            RawMaterialButton(
-                              child: Icon(
-                                Icons.person_add,
-                                size: 30,
-                              ),
-                              onPressed: () {},
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(50)),
-                              fillColor: Colors.white,
-                              constraints: BoxConstraints(
-                                  minHeight: 60.0, minWidth: 60.0),
-                            ),
-                          ],
-                        ),
-                        Container(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              Padding(
-                                padding:
-                                    const EdgeInsets.only(top: 10, bottom: 10),
-                                child: Text(
-                                  "Working Days",
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 16.0,
-                                  ),
-                                ),
-                              ),
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: <Widget>[
-                                  Chip(
-                                    label: Text(
-                                      "Sun",
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 16.0,
-                                      ),
-                                    ),
-                                  ),
-                                  Chip(
-                                    label: Text(
-                                      "Mon",
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 16.0,
-                                      ),
-                                    ),
-                                  ),
-                                  Chip(
-                                    label: Text(
-                                      "Tue",
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 16.0,
-                                      ),
-                                    ),
-                                  ),
-                                  Chip(
-                                    label: Text(
-                                      "Sat",
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 16.0,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              Row(
-                                children: <Widget>[
-                                  Chip(
-                                    label: Text(
-                                      "Sun",
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 16.0,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: <Widget>[
-                                  Text(
-                                    "Visiting Hours",
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 16.0,
-                                    ),
-                                  ),
-                                  Text(
-                                    "Fee",
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 16.0,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: <Widget>[
-                                  Text(
-                                    "09.00 AM - 12.00 PM",
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 16.0,
-                                    ),
-                                  ),
-                                  Text(
-                                    "500 BDT",
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 16.0,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: <Widget>[
-                                  Text(
-                                    "Reviews",
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 16.0,
-                                    ),
-                                  ),
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.end,
-                                    children: <Widget>[
-                                      Icon(Icons.star),
-                                      Icon(Icons.star),
-                                      Icon(Icons.star),
-                                      Icon(Icons.star),
-                                      Icon(Icons.star_border)
-                                    ],
-                                  )
-                                ],
-                              )
-                            ],
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
+                DoctorCardBuilder(
+                  doctorName: 'Dr. Samira Rhaman',
+                  designation: 'Assistant Proffessior',
+                  title: 'Cardiology',
+                  postingHospital: 'Dhaka Medical Hospital',
+                  workingDays: ['Sun', 'Mon', 'Sat','Wed','Tue'],
+                  fee: '500 BDT',
+                  visitingHours: '09.00 AM - 12.00 AM',
                 ),
                 Container(
                   child: TableCalendar(
@@ -270,8 +83,20 @@ class _AppoinmentDatePickerState extends State<AppoinmentDatePicker> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: <Widget>[
-                        Text("05 May 2020"),
-                        Text("Doctor Availabile"),
+                        Text(
+                          "05 May 2020",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 16.0,
+                          ),
+                        ),
+                        Text(
+                          "Doctor Availabile",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 16.0,
+                          ),
+                        ),
                       ],
                     ),
                   ),
@@ -287,7 +112,13 @@ class _AppoinmentDatePickerState extends State<AppoinmentDatePicker> {
                     ),
                     child: FlatButton(
                       onPressed: () {},
-                      child: Text("Confirm"),
+                      child: Text(
+                        "Confirm",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20.0,
+                            color: Colors.white),
+                      ),
                     ),
                   ),
                 )
@@ -299,3 +130,5 @@ class _AppoinmentDatePickerState extends State<AppoinmentDatePicker> {
     );
   }
 }
+
+

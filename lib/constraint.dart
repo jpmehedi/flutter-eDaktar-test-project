@@ -28,3 +28,13 @@ const kHoverTextStyle = TextStyle(
   fontWeight: FontWeight.bold,
   fontSize: 14.0,
 );
+
+const kChipTextStyle = TextStyle(
+  fontWeight: FontWeight.bold,
+  fontSize: 16.0,
+);
+
+const kCardTextStyle = TextStyle(
+  fontWeight: FontWeight.bold,
+  fontSize: 16.0,
+);
