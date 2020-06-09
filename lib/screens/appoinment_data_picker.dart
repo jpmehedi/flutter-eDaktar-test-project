@@ -69,17 +69,43 @@ class _AppoinmentDatePickerState extends State<AppoinmentDatePicker> {
                       children: <Widget>[
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
                             Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
-                                Text("Dr. Mahinur Islam"),
-                                Text("Dr. Mahinur Islam"),
-                                Text("Dr. Mahinur Islam"),
-                                Text("Dr. Mahinur Islam"),
+                                Text(
+                                  "Dr. Mahinur Islam",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20,
+                                  ),
+                                ),
+                                Text(
+                                  "Assistant Proffesior",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Text(
+                                  "Cardiology",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Text(
+                                  "Dhaka Medical College",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
                               ],
                             ),
                             RawMaterialButton(
-                              child: Icon(Icons.person_add),
+                              child: Icon(
+                                Icons.person_add,
+                                size: 30,
+                              ),
                               onPressed: () {},
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(50)),
@@ -93,29 +119,69 @@ class _AppoinmentDatePickerState extends State<AppoinmentDatePicker> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
-                              Text("Working Days"),
+                              Padding(
+                                padding:
+                                    const EdgeInsets.only(top: 10, bottom: 10),
+                                child: Text(
+                                  "Working Days",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 16.0,
+                                  ),
+                                ),
+                              ),
                               Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
                                 children: <Widget>[
                                   Chip(
-                                    label: Text("Sun"),
+                                    label: Text(
+                                      "Sun",
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 16.0,
+                                      ),
+                                    ),
                                   ),
                                   Chip(
-                                    label: Text("Sun"),
+                                    label: Text(
+                                      "Mon",
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 16.0,
+                                      ),
+                                    ),
                                   ),
                                   Chip(
-                                    label: Text("Sun"),
+                                    label: Text(
+                                      "Tue",
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 16.0,
+                                      ),
+                                    ),
                                   ),
                                   Chip(
-                                    label: Text("Sun"),
+                                    label: Text(
+                                      "Sat",
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 16.0,
+                                      ),
+                                    ),
                                   ),
                                 ],
                               ),
                               Row(
                                 children: <Widget>[
                                   Chip(
-                                    label: Text("Sun"),
+                                    label: Text(
+                                      "Sun",
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 16.0,
+                                      ),
+                                    ),
                                   ),
                                 ],
                               ),
@@ -123,23 +189,53 @@ class _AppoinmentDatePickerState extends State<AppoinmentDatePicker> {
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
                                 children: <Widget>[
-                                  Text("Visiting Hours"),
-                                  Text("Fee"),
+                                  Text(
+                                    "Visiting Hours",
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 16.0,
+                                    ),
+                                  ),
+                                  Text(
+                                    "Fee",
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 16.0,
+                                    ),
+                                  ),
                                 ],
                               ),
                               Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
                                 children: <Widget>[
-                                  Text("09.00 AM - 12.00 PM"),
-                                  Text("500 BDT"),
+                                  Text(
+                                    "09.00 AM - 12.00 PM",
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 16.0,
+                                    ),
+                                  ),
+                                  Text(
+                                    "500 BDT",
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 16.0,
+                                    ),
+                                  ),
                                 ],
                               ),
                               Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
                                 children: <Widget>[
-                                  Text("Reviews"),
+                                  Text(
+                                    "Reviews",
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 16.0,
+                                    ),
+                                  ),
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.end,
                                     children: <Widget>[
@@ -147,7 +243,7 @@ class _AppoinmentDatePickerState extends State<AppoinmentDatePicker> {
                                       Icon(Icons.star),
                                       Icon(Icons.star),
                                       Icon(Icons.star),
-                                      Icon(Icons.star)
+                                      Icon(Icons.star_border)
                                     ],
                                   )
                                 ],
