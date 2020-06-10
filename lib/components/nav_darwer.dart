@@ -1,3 +1,4 @@
+import 'package:e_daktar/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 import '../constraint.dart';
 
@@ -67,7 +68,7 @@ class NavDrawer extends StatelessWidget {
           color: Colors.pink,
           child: InkWell(
             onTap: () {
-              //TODO:
+              Navigator.pushNamed(context, LoginScreen.id);
             },
             child: Padding(
               padding: const EdgeInsets.all(12.0),

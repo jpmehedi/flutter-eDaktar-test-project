@@ -44,3 +44,15 @@ const kReuseableCardStyle = TextStyle(
   fontWeight: FontWeight.bold,
   fontSize: 18.0,
 );
+
+const kHomePagePrimaryTextStyle = TextStyle(
+  fontSize: 18.0,
+  fontWeight: FontWeight.bold,
+  color: Colors.black,
+);
+
+const kHomePageScondaryTextStyle = TextStyle(
+  fontSize: 14.0,
+  fontWeight: FontWeight.bold,
+  color: Colors.black,
+);

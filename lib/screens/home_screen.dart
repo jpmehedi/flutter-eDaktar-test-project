@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../components/nav_darwer.dart';
 import '../constraint.dart';
+import '../components/reuseable_card.dart';
 
 class HomeScreen extends StatefulWidget {
   static String id = "HomeScreen";
@@ -52,10 +53,22 @@ class _HomeScreenState extends State<HomeScreen> {
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
-                              Text('Mehedi Hasan'),
-                              Text('Mirpur, Dhaka'),
-                              Text('26 Years'),
-                              Text('Male'),
+                              Text(
+                                'Mehedi Hasan',
+                                style: kHomePagePrimaryTextStyle,
+                              ),
+                              Text(
+                                'Mirpur, Dhaka',
+                                style: kHomePageScondaryTextStyle,
+                              ),
+                              Text(
+                                '26 Years',
+                                style: kHomePageScondaryTextStyle,
+                              ),
+                              Text(
+                                'Male',
+                                style: kHomePageScondaryTextStyle,
+                              ),
                             ],
                           ),
                           Icon(
@@ -80,12 +93,36 @@ class _HomeScreenState extends State<HomeScreen> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisSize: MainAxisSize.max,
                           children: <Widget>[
-                            Text('Contact'),
-                            Text('Phone'),
-                            Text('+880-1790180825'),
-                            Text('Address'),
-                            Text('Block-D, Road 19/A, House# 221/2'),
-                            Text('Mirpur-10, Dhaka-1276')
+                            Text(
+                              'Contact',
+                              style: kHomePagePrimaryTextStyle,
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              'Phone',
+                              style: kHomePageScondaryTextStyle,
+                            ),
+                            Text(
+                              '+880-1790180825',
+                              style: kHomePageScondaryTextStyle,
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              'Address',
+                              style: kHomePagePrimaryTextStyle,
+                            ),
+                            Text(
+                              'Block-D, Road 19/A, House# 221/2',
+                              style: kHomePageScondaryTextStyle,
+                            ),
+                            Text(
+                              'Mirpur-10, Dhaka-1276',
+                              style: kHomePageScondaryTextStyle,
+                            )
                           ],
                         ),
                       ),
@@ -102,7 +139,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: TextField(
                           decoration: InputDecoration(
                               icon: Icon(Icons.search),
-                              hintText: 'Search',
+                              hintText: 'Search Doctor',
                               hintStyle: TextStyle(
                                 color: Colors.grey,
                                 fontWeight: FontWeight.bold,
@@ -158,39 +195,6 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
           )),
-    );
-  }
-}
-
-class ReuseableCard extends StatelessWidget {
-  ReuseableCard({this.title, this.hedding});
-  final String hedding;
-  final String title;
-
-  @override
-  Widget build(BuildContext context) {
-    return Expanded(
-      child: GestureDetector(
-        child: Container(
-          width: 120,
-          height: 120,
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10), color: Colors.teal),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Text(
-                hedding,
-                style: kReuseableCardStyle,
-              ),
-              Text(
-                title,
-                style: kReuseableCardStyle,
-              ),
-            ],
-          ),
-        ),
-      ),
     );
   }
 }
