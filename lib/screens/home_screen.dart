@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../components/nav_darwer.dart';
 
 class HomeScreen extends StatefulWidget {
   static String id = "HomeScreen";
@@ -7,19 +8,23 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
         key: _scaffoldKey,
-        drawer: Drawer(),
+        drawer: Drawer(
+          child: NavDrawer(),
+        ),
         appBar: AppBar(
           backgroundColor: Colors.grey,
           elevation: 0,
-          title: Text('hi'),
           leading: IconButton(
-            icon: Icon(Icons.menu, color: Colors.black,),
+            icon: Icon(
+              Icons.menu,
+              color: Colors.black,
+            ),
             onPressed: () => _scaffoldKey.currentState.openDrawer(),
           ),
         ),
