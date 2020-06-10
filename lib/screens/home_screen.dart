@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../components/nav_darwer.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -18,15 +19,22 @@ class _HomeScreenState extends State<HomeScreen> {
           child: NavDrawer(),
         ),
         appBar: AppBar(
-          backgroundColor: Colors.grey,
+          backgroundColor: Colors.white10,
           elevation: 0,
           leading: IconButton(
             icon: Icon(
-              Icons.menu,
+              FontAwesomeIcons.alignLeft,
               color: Colors.black,
             ),
             onPressed: () => _scaffoldKey.currentState.openDrawer(),
           ),
+          actions: <Widget>[
+            Padding(
+              padding: const EdgeInsets.only(right: 20),
+              child: Icon(Icons.notifications_active,color: Colors.black,),
+            ),
+            
+          ],
         ),
         body: Center(
           child: Image.asset('images/index.jpeg'),

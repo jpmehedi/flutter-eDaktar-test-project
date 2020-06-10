@@ -66,8 +66,8 @@ class NavDrawer extends StatelessWidget {
         Container(
           color: Colors.pink,
           child: InkWell(
-            onTap: (){
-              Navigator.pop(context);
+            onTap: () {
+              //TODO:
             },
             child: Padding(
               padding: const EdgeInsets.all(12.0),
@@ -77,7 +77,7 @@ class NavDrawer extends StatelessWidget {
               ),
             ),
           ),
-        )
+        ),
       ],
     );
   }
