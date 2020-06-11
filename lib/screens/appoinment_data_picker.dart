@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
 
 import '../components/doctor_card_builder.dart';
+import '../components/resueable_long_button.dart';
 
 class AppoinmentDatePicker extends StatefulWidget {
   static String id = "AppoinmentDatePicker";
@@ -64,7 +65,7 @@ class _AppoinmentDatePickerState extends State<AppoinmentDatePicker> {
                   designation: 'Assistant Proffessior',
                   title: 'Cardiology',
                   postingHospital: 'Dhaka Medical Hospital',
-                  workingDays: ['Sun', 'Mon', 'Sat','Wed','Tue'],
+                  workingDays: ['Sun', 'Mon', 'Sat', 'Wed', 'Tue'],
                   fee: '500 BDT',
                   visitingHours: '09.00 AM - 12.00 AM',
                 ),
@@ -101,26 +102,9 @@ class _AppoinmentDatePickerState extends State<AppoinmentDatePicker> {
                     ),
                   ),
                 ),
-                Padding(
-                  padding:
-                      const EdgeInsets.only(left: 20, right: 20, bottom: 20),
-                  child: Container(
-                    width: double.infinity,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: Colors.blue,
-                    ),
-                    child: FlatButton(
-                      onPressed: () {},
-                      child: Text(
-                        "Confirm",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 20.0,
-                            color: Colors.white),
-                      ),
-                    ),
-                  ),
+                ResueableLongButton(
+                  onPressed: (){},
+                  buttonText: 'Confirmed',
                 )
               ],
             ),

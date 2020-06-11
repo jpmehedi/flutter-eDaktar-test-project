@@ -1,6 +1,7 @@
+import '../components/receipt_row_builder.dart';
 import 'package:flutter/material.dart';
 import '../components/doctor_card_builder.dart';
-import '../constraint.dart';
+import '../components/resueable_long_button.dart';
 
 class Payment extends StatefulWidget {
   static String id = 'Payment';
@@ -97,49 +98,69 @@ class _PaymentState extends State<Payment> {
                       ),
                     ],
                   ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      'Payment Method',
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 26,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: <Widget>[
+                    Row(
+                      children: <Widget>[
+                        Checkbox(
+                          value: false,
+                          onChanged: (value) {
+                            print(value);
+                          },
+                        ),
+                        Text('Cash'),
+                      ],
+                    ),
+                    Row(
+                      children: <Widget>[
+                        Checkbox(
+                          value: false,
+                          onChanged: (value) {
+                            print(value);
+                          },
+                        ),
+                        Text('Card'),
+                      ],
+                    ),
+                    Row(
+                      children: <Widget>[
+                        Checkbox(
+                          value: false,
+                          onChanged: (value) {
+                            print(value);
+                          },
+                        ),
+                        Text('bCash'),
+                      ],
+                    )
+                  ],
+                ),
+                SizedBox(
+                  height: 15,
+                ),
+                ResueableLongButton(
+                  onPressed: () {},
+                  buttonText: 'Confirmd',
                 )
               ],
             ),
           ),
         ),
-      ),
-    );
-  }
-}
-
-class ReceiptRowBuilder extends StatelessWidget {
-  ReceiptRowBuilder({this.description, this.money});
-  final String description;
-  final String money;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.all(10),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10),
-        color: Colors.grey,
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: <Widget>[
-          Text(
-            description,
-            style: TextStyle(
-              color: Colors.black,
-              fontSize: 16,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          Text(
-            money,
-            style: TextStyle(
-              color: Colors.black,
-              fontSize: 16,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-        ],
       ),
     );
   }
