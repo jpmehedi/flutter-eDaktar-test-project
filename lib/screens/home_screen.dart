@@ -1,4 +1,5 @@
 import 'package:e_daktar/screens/appoinment_data_picker.dart';
+import 'package:e_daktar/screens/doctor_list_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../components/nav_darwer.dart';
@@ -6,6 +7,7 @@ import '../constraint.dart';
 import '../components/reuseable_card.dart';
 import '../screens/appoinment.dart';
 import '../screens/payment.dart';
+import '../components/resueable_searchbar.dart';
 
 class HomeScreen extends StatefulWidget {
   static String id = "HomeScreen";
@@ -133,23 +135,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   SizedBox(
                     height: 20,
                   ),
-                  Container(
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: Colors.grey[300]),
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 20),
-                      child: TextField(
-                        decoration: InputDecoration(
-                            icon: Icon(Icons.search),
-                            hintText: 'Search Doctor',
-                            hintStyle: TextStyle(
-                              color: Colors.grey,
-                              fontWeight: FontWeight.bold,
-                            ),
-                            border: InputBorder.none),
-                      ),
-                    ),
+                  ResueableSearchBar(
+                    hintText: 'Search Doctor',
+                    icon: Icon(Icons.search),
                   ),
                   SizedBox(
                     height: 20,
@@ -195,7 +183,9 @@ class _HomeScreenState extends State<HomeScreen> {
                               width: 20,
                             ),
                             ReuseableCard(
-                              onTap: () {},
+                              onTap: () {
+                                Navigator.pushNamed(context, DoctorList.id);
+                              },
                               hedding: 'Others',
                               title: 'Information',
                             ),
@@ -213,3 +203,5 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
+
+
