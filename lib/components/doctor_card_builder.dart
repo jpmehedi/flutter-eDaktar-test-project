@@ -10,7 +10,8 @@ class DoctorCardBuilder extends StatelessWidget {
       @required this.postingHospital,
       @required this.workingDays,
       @required this.fee,
-      @required this.visitingHours});
+      @required this.visitingHours,
+      this.row});
   final String doctorName;
   final String designation;
   final String title;
@@ -18,6 +19,7 @@ class DoctorCardBuilder extends StatelessWidget {
   List workingDays = [];
   final String fee;
   final String visitingHours;
+  final Widget row;
 
   @override
   Widget build(BuildContext context) {
@@ -142,6 +144,12 @@ class DoctorCardBuilder extends StatelessWidget {
                   )
                 ],
               ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Container(
+              child: row, 
             )
           ],
         ),
@@ -149,3 +157,5 @@ class DoctorCardBuilder extends StatelessWidget {
     );
   }
 }
+
+
