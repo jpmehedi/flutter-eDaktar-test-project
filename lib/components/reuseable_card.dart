@@ -3,17 +3,16 @@ import '../constraint.dart';
 import '../screens/appoinment_data_picker.dart';
 
 class ReuseableCard extends StatelessWidget {
-  ReuseableCard({this.title, this.hedding});
+  ReuseableCard({this.title, this.hedding, @required this.onTap});
   final String hedding;
   final String title;
+  final Function onTap;
 
   @override
   Widget build(BuildContext context) {
     return Expanded(
       child: GestureDetector(
-        onTap: () {
-          Navigator.pushNamed(context, AppoinmentDatePicker.id);
-        },
+        onTap:onTap,
         child: Container(
           width: 120,
           height: 120,

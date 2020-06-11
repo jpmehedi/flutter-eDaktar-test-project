@@ -1,8 +1,10 @@
+import 'package:e_daktar/screens/appoinment_data_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../components/nav_darwer.dart';
 import '../constraint.dart';
 import '../components/reuseable_card.dart';
+import '../screens/appoinment.dart';
 
 class HomeScreen extends StatefulWidget {
   static String id = "HomeScreen";
@@ -157,6 +159,10 @@ class _HomeScreenState extends State<HomeScreen> {
                         Row(
                           children: <Widget>[
                             ReuseableCard(
+                              onTap: () {
+                                Navigator.pushNamed(
+                                    context, AppoinmentDatePicker.id);
+                              },
                               hedding: 'Appoinment ',
                               title: 'Schedule',
                             ),
@@ -164,6 +170,9 @@ class _HomeScreenState extends State<HomeScreen> {
                               width: 20,
                             ),
                             ReuseableCard(
+                              onTap: () {
+                                Navigator.pushNamed(context, Appoinment.id);
+                              },
                               hedding: 'Recent',
                               title: 'Prescription',
                             ),
@@ -175,6 +184,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         Row(
                           children: <Widget>[
                             ReuseableCard(
+                              onTap: () {},
                               hedding: 'COVID-19 ',
                               title: 'Information',
                             ),
@@ -182,6 +192,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               width: 20,
                             ),
                             ReuseableCard(
+                              onTap: () {},
                               hedding: 'Others',
                               title: 'Information',
                             ),
