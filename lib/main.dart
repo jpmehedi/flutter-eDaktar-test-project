@@ -4,6 +4,7 @@ import './screens/login_screen.dart';
 import './screens/home_screen.dart';
 import './screens/appoinment_data_picker.dart';
 import './screens/appoinment.dart';
+import './screens/payment.dart';
 
 void main() => runApp(MyApp());
 
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
         HomeScreen.id: (context) => HomeScreen(),
         AppoinmentDatePicker.id: (context) => AppoinmentDatePicker(),
         Appoinment.id: (context) => Appoinment(),
+        Payment.id: (context) => Payment(),
       },
     );
   }

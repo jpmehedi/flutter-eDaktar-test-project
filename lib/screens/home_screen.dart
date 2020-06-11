@@ -5,6 +5,7 @@ import '../components/nav_darwer.dart';
 import '../constraint.dart';
 import '../components/reuseable_card.dart';
 import '../screens/appoinment.dart';
+import '../screens/payment.dart';
 
 class HomeScreen extends StatefulWidget {
   static String id = "HomeScreen";
@@ -184,7 +185,9 @@ class _HomeScreenState extends State<HomeScreen> {
                         Row(
                           children: <Widget>[
                             ReuseableCard(
-                              onTap: () {},
+                              onTap: () {
+                                Navigator.pushNamed(context, Payment.id);
+                              },
                               hedding: 'COVID-19 ',
                               title: 'Information',
                             ),

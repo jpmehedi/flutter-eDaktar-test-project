@@ -1,10 +1,10 @@
-import 'package:e_daktar/components/doctor_card_builder.dart';
-import 'package:e_daktar/components/small_button_builder.dart';
+
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../components/nav_darwer.dart';
-import '../constraint.dart';
-import '../components/reuseable_card.dart';
+import '../components/doctor_card_builder.dart';
+import '../components/small_button_builder.dart';
+
 
 class Appoinment extends StatefulWidget {
   static String id = "Appoinment";
