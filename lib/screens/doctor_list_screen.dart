@@ -4,6 +4,7 @@ import '../components/nav_darwer.dart';
 import '../components/resueable_searchbar.dart';
 import '../components/set_appoinment_card.dart';
 import '../screens/new_patint_screen.dart';
+import '../components/dropdown_button_builder.dart';
 
 class DoctorList extends StatefulWidget {
   static String id = 'DoctorList';
@@ -59,75 +60,35 @@ class _DoctorListState extends State<DoctorList> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
-                      Expanded(
-                        child: Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            color: Colors.grey[300],
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.only(left: 10.0),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
-                              children: <Widget>[
-                                Text(
-                                  'Speciality',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 16,
-                                  ),
-                                ),
-                                DropdownButton<String>(
-                                  items: _speciality.map((String value) {
-                                    return new DropdownMenuItem<String>(
-                                      value: value,
-                                      child: new Text(value),
-                                    );
-                                  }).toList(),
-                                  onChanged: (value) {
-                                    print(value);
-                                  },
-                                ),
-                              ],
-                            ),
-                          ),
+                      DropdownButtonBuilders(
+                        dropDownButtonTag: 'Speciality',
+                        dropdownButton: DropdownButton<String>(
+                          items: _speciality.map((String value) {
+                            return new DropdownMenuItem<String>(
+                              value: value,
+                              child: new Text(value),
+                            );
+                          }).toList(),
+                          onChanged: (value) {
+                            print(value);
+                          },
                         ),
                       ),
                       SizedBox(
                         width: 20,
                       ),
-                      Expanded(
-                        child: Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            color: Colors.grey[300],
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.only(left: 10.0),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
-                              children: <Widget>[
-                                Text(
-                                  'Area',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 16,
-                                  ),
-                                ),
-                                DropdownButton<String>(
-                                  items: _speciality.map((String value) {
-                                    return new DropdownMenuItem<String>(
-                                      value: value,
-                                      child: new Text(value),
-                                    );
-                                  }).toList(),
-                                  onChanged: (value) {
-                                    print(value);
-                                  },
-                                ),
-                              ],
-                            ),
-                          ),
+                      DropdownButtonBuilders(
+                        dropDownButtonTag: 'Area',
+                        dropdownButton: DropdownButton<String>(
+                          items: _area.map((String value) {
+                            return new DropdownMenuItem<String>(
+                              value: value,
+                              child: new Text(value),
+                            );
+                          }).toList(),
+                          onChanged: (value) {
+                            print(value);
+                          },
                         ),
                       ),
                     ],
