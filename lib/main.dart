@@ -6,6 +6,7 @@ import './screens/appoinment_data_picker.dart';
 import './screens/appoinment.dart';
 import './screens/payment.dart';
 import './screens/doctor_list_screen.dart';
+import './screens/new_patint_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
         Appoinment.id: (context) => Appoinment(),
         Payment.id: (context) => Payment(),
         DoctorList.id: (context) => DoctorList(),
+        NewPatintScreen.id:(context) => NewPatintScreen()
       },
     );
   }

@@ -11,7 +11,9 @@ class SetAppoinmentCard extends StatelessWidget {
       @required this.workingDays,
       @required this.fee,
       @required this.visitingHours,
-      this.row});
+      this.row,
+        @required this.onPressed,
+      });
   final String doctorName;
   final String designation;
   final String title;
@@ -20,6 +22,7 @@ class SetAppoinmentCard extends StatelessWidget {
   final String fee;
   final String visitingHours;
   final Widget row;
+final Function onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -150,6 +153,7 @@ class SetAppoinmentCard extends StatelessWidget {
                       ),
                       SmallButtonBuilder(
                         text: 'Set Appoinment',
+                        onPressed:onPressed,
                       )
                     ],
                   )

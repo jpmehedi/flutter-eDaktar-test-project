@@ -1,10 +1,8 @@
-
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../components/nav_darwer.dart';
 import '../components/doctor_card_builder.dart';
 import '../components/small_button_builder.dart';
-
 
 class Appoinment extends StatefulWidget {
   static String id = "Appoinment";
@@ -72,9 +70,11 @@ class _AppoinmentState extends State<Appoinment> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
                       SmallButtonBuilder(
+                        onPressed: () {},
                         text: 'Prescription',
                       ),
                       SmallButtonBuilder(
+                        onPressed: () {},
                         text: 'Serial No-24',
                       ),
                     ],
@@ -92,9 +92,11 @@ class _AppoinmentState extends State<Appoinment> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
                       SmallButtonBuilder(
+                        onPressed: () {},
                         text: 'Prescription',
                       ),
                       SmallButtonBuilder(
+                        onPressed: () {},
                         text: 'Serial No-24',
                       ),
                     ],
@@ -112,9 +114,11 @@ class _AppoinmentState extends State<Appoinment> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
                       SmallButtonBuilder(
+                        onPressed: () {},
                         text: 'Prescription',
                       ),
                       SmallButtonBuilder(
+                        onPressed: () {},
                         text: 'Serial No-24',
                       ),
                     ],
@@ -132,9 +136,11 @@ class _AppoinmentState extends State<Appoinment> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
                       SmallButtonBuilder(
+                        onPressed: () {},
                         text: 'Prescription',
                       ),
                       SmallButtonBuilder(
+                        onPressed: () {},
                         text: 'Serial No-24',
                       ),
                     ],
