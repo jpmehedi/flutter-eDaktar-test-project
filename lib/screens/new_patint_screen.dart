@@ -18,6 +18,25 @@ class _NewPatintScreenState extends State<NewPatintScreen> {
   List<String> _age = ['1', '2', '3', '4', '5'];
   List<String> _weight = ['1', '2', '3', '4', '5'];
   List<String> _occopetions = ['Doctor', 'Enginieer', 'Business'];
+
+  _showDialog(context) {
+    return showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Container(
+            width: 300,
+            height: 400,
+            child: Hero(
+              tag: 'zoom',
+              child: Image.asset('images/prescription.jpg'),
+            ),
+          ),
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -178,15 +197,35 @@ class _NewPatintScreenState extends State<NewPatintScreen> {
                                 child: Icon(Icons.add,
                                     size: 50, color: Colors.white),
                               ),
-                              Container(
-                                width: 120,
-                                height: 140,
-                                child: Image.asset('images/prescription.jpg'),
+                              FlatButton(
+                                padding: EdgeInsets.zero,
+                                onPressed: () {
+                                  return _showDialog(context);
+                                },
+                                child: Container(
+                                  width: 120,
+                                  height: 140,
+                                  child: Hero(
+                                    tag: 'zoom',
+                                    child:
+                                        Image.asset('images/prescription.jpg'),
+                                  ),
+                                ),
                               ),
-                              Container(
-                                width: 120,
-                                height: 140,
-                                child: Image.asset('images/prescription.jpg'),
+                              FlatButton(
+                                padding: EdgeInsets.zero,
+                                onPressed: () {
+                                  return _showDialog(context);
+                                },
+                                child: Container(
+                                  width: 120,
+                                  height: 140,
+                                  child: Hero(
+                                    tag: 'zoom',
+                                    child:
+                                        Image.asset('images/prescription.jpg'),
+                                  ),
+                                ),
                               ),
                             ],
                           ),
