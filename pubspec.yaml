@@ -27,6 +27,7 @@ flutter:
    - images/index.jpeg
    - images/card.jpeg
    - images/avatar.png
+   - images/prescription.jpg
 
 
   # fonts:
